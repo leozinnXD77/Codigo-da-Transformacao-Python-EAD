@@ -30,35 +30,35 @@ uma experiência satisfatória.)
 
 
 '''
-c1_nome = "americano"
-c1_estoque = 100
-c1_preco = 8.90
-c1_validade = "10/12/2026"
-c1_descricao = "O clássico americano, com entrada direta na testa."
+c1_nome = ""
+c1_estoque = 0
+c1_preco = 0
+c1_validade = ""
+c1_descricao = ""
 
-c2_nome = "social"
-c2_estoque = 50
-c2_preco = 12.90
-c2_validade = "10/10/2026"
-c2_descricao = "Fino, rômantico e robusto."
+c2_nome = ""
+c2_estoque = 0
+c2_preco = 0
+c2_validade = ""
+c2_descricao = ""
 
-c3_nome = "japa"
-c3_estoque = 130
-c3_preco = 15.90
-c3_validade = "10/12/2026"
-c3_descricao = "Japa, corte autêntico."
+c3_nome = ""
+c3_estoque = 0
+c3_preco = 0
+c3_validade = ""
+c3_descricao = ""
 
-c4_nome = "japa"
-c4_estoque = 130
-c4_preco = 15.90
-c4_validade = "10/12/2026"
-c4_descricao = "Japa, corte autêntico."
+c4_nome = ""
+c4_estoque = 0
+c4_preco = 0
+c4_validade = ""
+c4_descricao = ""
 
-c5_nome = "japa"
-c5_estoque = 130
-c5_preco = 15.90
-c5_validade = "10/12/2026"
-c5_descricao = "Japa, corte autêntico."
+c5_nome = ""
+c5_estoque = 0
+c5_preco = 0
+c5_validade = ""
+c5_descricao = ""
 
 
 
@@ -87,43 +87,87 @@ if opcao == 1:
         time.sleep(3)
         c1_descricao = input("\ndescreva o corte: ")
         time.sleep(2)
-        print(f"✂corte {c1_nome} cadastrado com sucesso na lista 1!✂")
+        print(f"\n✂corte {c1_nome} cadastrado com sucesso na lista 1!✂\n")
  
-    if c2_nome == "":
+    elif c2_nome == "":
         print("cadastrando cortes...")
         time.sleep(3)
         c2_nome = input("digite o nome do corte: ")
         c2_estoque = int(input("coloque a quantidade em estoque: "))
         c2_preco = float(input("coloque o preço do corte: "))
         c2_descricao = input("descreva o corte: ")
-        print(f"✂corte {c2_nome} cadastrado com sucesso na lista 2!✂")
+        print(f"\n✂corte {c2_nome} cadastrado com sucesso na lista 2!✂\n")
 
-    if c3_nome == "":
+    elif c3_nome == "":
         print("cadastrando cortes...")
         time.sleep(3)
         c3_nome = input("digite o nome do corte: ")
         c3_estoque = int(input("coloque a quantidade em estoque: "))
         c3_preco = float(input("coloque o preço do corte: "))
         c3_descricao = input("descreva o corte: ")
-        print(f"✂corte {c3_nome} cadastrado com sucesso na lista 3!✂")
+        print(f"\n✂corte {c3_nome} cadastrado com sucesso na lista 3!✂\n")
 
-    if c4_nome == "":
+    elif c4_nome == "":
         print("cadastrando cortes...")
 
         c4_nome = input("digite o nome do corte: ")
         c4_estoque = int(input("coloque a quantidade em estoque: "))
         c4_preco = float(input("coloque o preço do corte: "))
         c4_descricao = input("descreva o corte: ")
-        print(f"✂corte {c4_nome} cadastrado com sucesso na lista 4!✂")
+        print(f"\n✂corte {c4_nome} cadastrado com sucesso na lista 4!✂\n")
 
-    if c5_nome == 1:
+    elif c5_nome == 1:
         print("cadastrando cortes...")
 
         c5_nome = input("digite o nome do corte: ")
         c5_estoque = int(input("coloque a quantidade em estoque: "))
         c5_preco = float(input("coloque o preço do corte: "))
         c5_descricao = input("descreva o corte: ")
-        print(f"✂corte {c5_nome} cadastrado com sucesso na lista 5!✂")
+        print(f"\n✂corte {c5_nome} cadastrado com sucesso na lista 5!✂\n")
+
+    else:
+        print("Máximo de cortes cadastrados!")
+        time.sleep(2)
+elif opcao == 2:
+        print('Listando cortes...')    
+        time.sleep(2)
+        if c1_nome == "" and c2_nome == "" and c3_nome == "" and c4_nome == "" and c5_nome == "":
+            print('Nenhum produto cadastrado no sistema ainda.')
+
+        else:
+            if c1_nome == "":
+                time.sleep(3)
+                print(f"\nNome: {c1_nome}, Estoque: {c1_estoque}, Preço: {c1_preco} e Descrição: '{c1_descricao}'. ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 else: 
     print("opção inválida, tente novamente!")
