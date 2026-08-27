@@ -1,9 +1,5 @@
-
-import tkinter as tk
-from tkinter import messagebox, ttk
 import time
 '''
-
 
 >>projeto barbearia:
 
@@ -162,29 +158,85 @@ while True:
             else:
                 print('\n','💠'*30,'\n')
                 if c1_nome != "":
-                    time.sleep(3)
-                    print(f"\nNome: {c1_nome}, Estoque: {c1_estoque}, Preço: {c1_preco} e Descrição: '{c1_descricao}'. ")
+                    print(f"Nome: {c1_nome}, Estoque: {c1_estoque}, Preço: {c1_preco} e Descrição: '{c1_descricao}'. ")
                     
-                elif c2_nome != "":
+                if c2_nome != "":
                     time.sleep(3)
                     print(f"\nNome: {c2_nome}, Estoque: {c2_estoque}, Preço: {c2_preco} e Descrição: '{c2_descricao}'. ")
 
-                elif c3_nome != "":
+                if c3_nome != "":
                     time.sleep(3)
                     print(f"\nNome: {c3_nome}, Estoque: {c3_estoque}, Preço: {c3_preco} e Descrição: '{c3_descricao}'. ")
                     
-                elif c4_nome != "":
+                if c4_nome != "":
                     time.sleep(3)
                     print(f"\nNome: {c4_nome}, Estoque: {c4_estoque}, Preço: {c4_preco} e Descrição: '{c4_descricao}'. ")
                     
-                elif c5_nome != "":
+                if c5_nome != "":
                     time.sleep(3)
                     print(f"\nNome: {c5_nome}, Estoque: {c5_estoque}, Preço: {c5_preco} e Descrição: '{c5_descricao}'. ")
                 
                 print('\n','💠'*30,'\n')
-    elif opcao == '0':
-            print('Saindo...')
+                time.sleep(2)
+            continue
+    elif opcao == 3:
+        print("realizando agendamento...")
+        time.sleep(3)
+        print('\n',"-"*30)
+        print('Temos todas essas opções de cortes disponíveis: ')
+        time.sleep(2)
+        if c1_nome != "":
+            print(f"\n1 - {c1_nome} - R${c1_preco}")
+            time.sleep(2)
+        if c2_nome != "":
+            print(f"\n2 - {c2_nome} - R${c2_preco}")
+            time.sleep(2)
+        if c3_nome != "":
+            print(f"\n3 - {c3_nome} - R${c3_preco}")
+            time.sleep(2)
+        if c4_nome != "":
+            print(f"\n4 - {c4_nome} - R${c4_preco}")
+            time.sleep(2)
+        if c5_nome != "":
+            print(f"\n5 - {c5_nome} - R${c5_preco}")
+            time.sleep(2)
+        print('\n',"-"*30)
+        time.sleep(2)
+        agendamento = int(input("\nEscolha o corte desejado ou aperte 0 para sair: "))
+        if agendamento == 1 and c1_nome != "":
+            print(f"\nAgendamento realizado com sucesso para o corte {c1_nome}!")
+            time.sleep(2)
+            continue
+        elif agendamento == 2 and c2_nome != "":
+            print(f"\nAgendamento realizado com sucesso para o corte {c2_nome}!")
+            time.sleep(2)
+            continue
+        elif agendamento == 3 and c3_nome != "":
+            print(f"\nAgendamento realizado com sucesso para o corte {c3_nome}!")
+            time.sleep(2)
+            continue
+        elif agendamento == 4 and c4_nome != "":
+            print(f"\nAgendamento realizado com sucesso para o corte {c4_nome}!")
+            time.sleep(2)
+            continue
+        elif agendamento == 5 and c5_nome != "":
+            print(f"\nAgendamento realizado com sucesso para o corte {c5_nome}!")
+            time.sleep(2)
+            continue
+        elif agendamento == 0:
+            print("\nSaindo do agendamento...")
+            time.sleep(2)
+            continue
+        else:
+            print("\nOpção inválida ou corte não cadastrado, tente novamente!")
+            time.sleep(2)
+            continue
+    
+    elif opcao == 0:
+            print('Saindo...\n')
+            time.sleep(3)
             break
     else: 
-        print("opção inválida, tente novamente!")
+        print("opção inválida, tente novamente!\n")
+        time.sleep(2)
         continue
