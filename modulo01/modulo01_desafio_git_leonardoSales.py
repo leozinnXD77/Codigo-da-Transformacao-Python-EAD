@@ -93,6 +93,7 @@ if opcao == 1:
         print("cadastrando cortes...")
         time.sleep(3)
         c2_nome = input("digite o nome do corte: ")
+        time.sleep(2)
         c2_estoque = int(input("coloque a quantidade em estoque: "))
         c2_preco = float(input("coloque o preço do corte: "))
         c2_descricao = input("descreva o corte: ")
@@ -102,6 +103,7 @@ if opcao == 1:
         print("cadastrando cortes...")
         time.sleep(3)
         c3_nome = input("digite o nome do corte: ")
+        time.sleep(2)
         c3_estoque = int(input("coloque a quantidade em estoque: "))
         c3_preco = float(input("coloque o preço do corte: "))
         c3_descricao = input("descreva o corte: ")
@@ -111,15 +113,17 @@ if opcao == 1:
         print("cadastrando cortes...")
 
         c4_nome = input("digite o nome do corte: ")
+        time.sleep(2)
         c4_estoque = int(input("coloque a quantidade em estoque: "))
         c4_preco = float(input("coloque o preço do corte: "))
         c4_descricao = input("descreva o corte: ")
         print(f"\n✂corte {c4_nome} cadastrado com sucesso na lista 4!✂\n")
 
-    elif c5_nome == 1:
+    elif c5_nome == "":
         print("cadastrando cortes...")
 
         c5_nome = input("digite o nome do corte: ")
+        time.sleep(2)
         c5_estoque = int(input("coloque a quantidade em estoque: "))
         c5_preco = float(input("coloque o preço do corte: "))
         c5_descricao = input("descreva o corte: ")
@@ -135,9 +139,28 @@ elif opcao == 2:
             print('Nenhum produto cadastrado no sistema ainda.')
 
         else:
+            print('\n','💠'*30,'\n')
             if c1_nome == "":
                 time.sleep(3)
                 print(f"\nNome: {c1_nome}, Estoque: {c1_estoque}, Preço: {c1_preco} e Descrição: '{c1_descricao}'. ")
+                
+            elif c2_nome == "":
+                time.sleep(3)
+                print(f"\nNome: {c2_nome}, Estoque: {c2_estoque}, Preço: {c2_preco} e Descrição: '{c2_descricao}'. ")
+
+            elif c3_nome == "":
+                time.sleep(3)
+                print(f"\nNome: {c3_nome}, Estoque: {c3_estoque}, Preço: {c3_preco} e Descrição: '{c3_descricao}'. ")
+                
+            elif c4_nome == "":
+                time.sleep(3)
+                print(f"\nNome: {c4_nome}, Estoque: {c4_estoque}, Preço: {c4_preco} e Descrição: '{c4_descricao}'. ")
+                
+            elif c5_nome == "":
+                time.sleep(3)
+                print(f"\nNome: {c5_nome}, Estoque: {c5_estoque}, Preço: {c5_preco} e Descrição: '{c5_descricao}'. ")
+            
+            print('\n','💠'*30,'\n')
 
 
 
