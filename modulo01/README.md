@@ -1,61 +1,67 @@
 # ✂️ Sistema de Cortes - Barbearia (CLI)
 
-Este projeto consiste em um Sistema de Cortes para Barbearia desenvolvido em Python, que funciona via linha de comando (CLI - *Command Line Interface*). O sistema permite cadastrar cortes de cabelo/barba, consultar o catálogo de serviços disponíveis e realizar agendamentos de forma simples e interativa.
+Este projeto consiste num **Sistema de Cortes para Barbearia** desenvolvido em **Python**, que funciona via linha de comando (CLI - *Command Line Interface*). O sistema permite cadastrar cortes de cabelo e barba, consultar o catálogo disponível e realizar agendamentos com atualização automática do estoque/vagas.
 
 ---
 
 ## 👥 Visão Geral e Papéis do Projeto
 
-O sistema foi estruturado considerando as necessidades de diferentes atores e papéis do negócio:
+O sistema foi estruturado considerando as necessidades de diferentes atores do negócio:
 
-* **PO (Dono do Negócio):** Controle centralizado dos cortes cadastrados e dos agendamentos efetuados na barbearia.
-* **QA (Visão do Cliente):** Facilidade e rapidez na escolha e no agendamento do corte desejado.
-* **Tech / Dev (Programador):** Código funcional e estruturado, aplicando recursos eficientes para atender às necessidades do negócio e dos clientes.
-* **UX (Designer de Experiência):** Planejamento voltado para uma navegação limpa, fluida e amigável no terminal, garantindo uma experiência satisfatória para o usuário.
-* **IA (Analista de Dados):** Estrutura preparada para identificar padrões de consumo, agendamentos e criar algoritmos de recomendação em Marketing.
+- **PO (Dono do Negócio):** Controle centralizado dos cortes e agendamentos da barbearia.
+- **QA (Visão do Cliente):** Facilidade e rapidez no processo de escolha e agendamento do corte desejado.
+- **Tech / Dev (Programador):** Código eficiente, funcional e preparado para manutenção e evolução.
+- **UX (Designer):** Planejamento focado na experiência do usuário para futuras versões com interface visual.
+- **IA (Analista de Dados):** Estrutura preparada para coleta de dados de consumo, identificação de padrões e recomendações em marketing.
 
 ---
 
 ## 🔄 Ciclo de Vida do Desenvolvimento
 
-1. **Planejamento:** Definição dos requisitos do sistema e mapeamento das necessidades da barbearia e de seus clientes.
-2. **Análise:** Modelagem dos dados do corte (nome, quantidade em estoque/vagas, preço, validade e descrição) e validação dos fluxos.
-3. **Desenvolvimento:** Construção da lógica em Python com navegação interativa via CLI e simulação de tempo de carregamento usando o módulo `time`.
-4. **Testes:** Validação dos fluxos de cadastro (limite de até 5 cortes), listagem dos serviços cadastrados e processo de agendamento.
-5. **Implantação:** Execução do script em ambiente Python no terminal local.
-6. **Manutenção:** Ajustes de código e preparação do sistema para a futura versão com Interface Gráfica (GUI).
+1. **Planejamento:** Definição dos requisitos do sistema e necessidades da barbearia.
+2. **Análise:** Modelagem dos dados dos cortes e validação dos fluxos do sistema.
+3. **Desenvolvimento:** Construção da lógica em Python via CLI com simulação de tempo de carregamento (`time.sleep`).
+4. **Testes:** Validação dos fluxos de cadastro, listagem de serviços e confirmação de agendamentos.
+5. **Implantação:** Execução do script no ambiente de produção/terminal local.
+6. **Manutenção:** Refatoração de código, tratamento de exceções e preparação para o lançamento da versão com Interface Gráfica (GUI).
 
 ---
 
 ## 🚀 Funcionalidades do Sistema
 
-* **`1` - Cadastrar corte:** Permite o registro de até 5 cortes individuais, armazenando nome, quantidade disponível em estoque/vagas, preço e descrição do corte.
-* **`2` - Listar cortes:** Exibe todos os cortes cadastrados no sistema com seus respectivos detalhes (Nome, Estoque, Preço e Descrição).
-* **`3` - Realizar agendamento:** Exibe os cortes disponíveis com seus respectivos valores e permite ao cliente escolher o corte desejado para agendar.
-* **`0` - Sair do sistema:** Encerra a execução do programa de forma segura.
+- **1 - Cadastrar Corte:** Permite o registro dos cortes guardando nome, quantidade em estoque/vagas, preço, data de validade e descrição.
+- **2 - Listar Cortes:** Exibe todos os cortes cadastrados com seus respectivos detalhes e quantidade disponível.
+- **3 - Realizar Agendamento:** Permite selecionar o corte desejado, realizar o agendamento, calcular o valor e dar baixa automática na quantidade disponível.
+- **0 - Sair:** Encerra a execução do programa de forma segura.
 
 ---
 
 ## 🛠️ Tecnologias e Conceitos Utilizados
 
-* **Linguagem:** Python 3
-* **Módulo Nativo:** `time` (utilizado para inserir pausas com `time.sleep()`, proporcionando dinamismo e simulação de processamento na CLI).
-* **Estruturas de Repetição:** Laço `while True` para manter o menu interativo em execução até a finalização pelo usuário.
-* **Estruturas Condicionais:** `if / elif / else` para gerenciamento das opções do menu e verificação das variáveis de armazenamento de cortes (`c1` a `c5`).
-* **Interatividade & Saída:** Uso de *f-strings* e emojis decorativos (✂️, 💠) para melhorar a apresentação dos dados no terminal.
+- **Linguagem:** Python 3
+- **Módulos Nativos:** `time` para simulação de dinamismo nas respostas do terminal.
+- **Estruturas de Repetição:** Laço `while True` para manter o menu ativo.
+- **Estruturas Condicionais:** `if / elif / else` para controle do fluxo e opções do menu.
+- **Validação de Estoque:** Subtração automática de vagas e impedimento de agendamentos sem quantidade suficiente.
+- **Formatação de Texto:** Manipulação de strings, uso de *f-strings* e formatadores de moeda `:.2f`.
 
 ---
 
 ## 💻 Como Executar o Programa
 
 ### Pré-requisitos
-
-* **Python 3.x** instalado no sistema.
+- **Python 3.x** instalado no sistema.
 
 ### Passo a Passo
 
-1. **Baixar o Código:** Salve o arquivo Python (por exemplo, `barbearia.py`) na sua máquina.
-2. **Abrir o Terminal:** Navegue até a pasta onde o arquivo foi salvo.
-3. **Executar a Aplicação:** Execute o seguinte comando no terminal:
+1. **Baixar o Código:**
+   Salve o arquivo Python (por exemplo, `barbearia.py`) na sua máquina.
+
+2. **Abrir o Terminal:**
+   Navegue até a pasta onde o arquivo foi salvo.
+
+3. **Executar a Aplicação:**
+   Execute o seguinte comando no terminal:
    ```bash
+   python barbearia.py
    python barbearia.py
