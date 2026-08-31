@@ -5,14 +5,6 @@ import datetime
 
 num1 = 10
 num2 = 5
-num3 = 12
-num4 = 8
-num5 = 6
-num6 = 14
-num7 = 20
-num8 = 21
-num9 = 17
-num10 = 16
 
 print("\n","=" * 40)
 print("\n📐Teste de Utilidades📐")
