@@ -40,7 +40,7 @@ c2_descricao = ""
 
 c3_nome = ""
 c3_estoque = 0
-c3_preco = 0
+c3_preco = 0                      #<-- blocos de variáveis.
 c3_validade = ""
 c3_descricao = ""
 
@@ -174,7 +174,7 @@ while True:
                     time.sleep(3)
                     print(f"\nNome: {c2_nome}, Estoque: {c2_estoque}, Preço: {c2_preco} e Descrição: '{c2_descricao}'. ")
 
-                if c3_nome != "":
+                if c3_nome != "":             #<-- lista os cortes cadastrados.
                     time.sleep(3)
                     print(f"\nNome: {c3_nome}, Estoque: {c3_estoque}, Preço: {c3_preco} e Descrição: '{c3_descricao}'. ")
                     
@@ -203,7 +203,7 @@ while True:
         if c1_nome != "":
             print(f"\n1 - {c1_nome} - R${c1_preco}")
             time.sleep(2)
-        if c2_nome != "":
+        if c2_nome != "":                                             #<--  mostrar cortes para venda.
             print(f"\n2 - {c2_nome} - R${c2_preco}")
             time.sleep(2)
         if c3_nome != "":
@@ -227,7 +227,7 @@ while True:
             time.sleep(2)
             continue
         elif agendamento == 3 and c3_nome != "":
-            print(f"\nAgendamento realizado com sucesso para o corte {c3_nome}!")
+            print(f"\nAgendamento realizado com sucesso para o corte {c3_nome}!")            #<-- realizar venda.
             time.sleep(2)
             continue
         elif agendamento == 4 and c4_nome != "":
