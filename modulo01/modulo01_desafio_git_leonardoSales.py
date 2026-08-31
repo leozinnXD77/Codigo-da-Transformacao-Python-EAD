@@ -57,6 +57,7 @@ c5_validade = ""
 c5_descricao = ""
 
 while True:
+#======================MENU=========================
     print('-' * 48 + '\n')
     print("Bem-vindo ao sistema de menu de cortes!","\n") 
 
@@ -67,7 +68,11 @@ while True:
     print("0 - Sair do sistema\n")
     
     print('-' * 48 + '\n')
+#======================MENU============================
 
+#------------------------------------------------------
+
+#======================OPÇÃO 1=========================
     opcao = int(input('escolha sua opção: '))
 
     if opcao == 1:
@@ -149,6 +154,11 @@ while True:
         else:
             print("Máximo de cortes cadastrados!")
             time.sleep(2)
+#======================OPÇÃO 1=========================
+
+#------------------------------------------------------
+
+#======================OPÇÃO 2=========================
     elif opcao == 2:
             print('Listando cortes...')    
             time.sleep(2)
@@ -179,6 +189,11 @@ while True:
                 print('\n','💠'*30,'\n')
                 time.sleep(2)
             continue
+#======================OPÇÃO 2=========================
+
+#------------------------------------------------------
+
+#======================OPÇÃO 3=========================
     elif opcao == 3:
         print("realizando agendamento...")
         time.sleep(3)
@@ -231,11 +246,17 @@ while True:
             print("\nOpção inválida ou corte não cadastrado, tente novamente!")
             time.sleep(2)
             continue
-    
+#======================OPÇÃO 3=========================
+
+
+
+#opção de saida:
     elif opcao == 0:
             print('Saindo...\n')
             time.sleep(3)
             break
+
+#opção inválida:
     else: 
         print("opção inválida, tente novamente!\n")
         time.sleep(2)
