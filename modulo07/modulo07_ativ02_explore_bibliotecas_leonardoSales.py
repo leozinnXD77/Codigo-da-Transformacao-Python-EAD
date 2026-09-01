@@ -1,4 +1,4 @@
-import faker
+from PIL import faker
 import utilidades
 import time
 import datetime
