@@ -248,8 +248,6 @@ while True:
             continue
 #======================OPÇÃO 3=========================
 
-
-
 #opção de saida:
     elif opcao == 0:
             print('Saindo...\n')
