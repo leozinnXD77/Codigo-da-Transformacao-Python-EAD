@@ -29,6 +29,7 @@ def consultar_clima():
     url_api = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={chave_api}&lang=pt_br&units=metric"
 
     print("\nBuscando dados com OpenWeatherMap...")
+    time.sleep(2)
     
     # 3. Requisição HTTP GET
     resposta = requests.get(url_api)
@@ -51,14 +52,19 @@ def consultar_clima():
             localizacao = f"{nome_cidade}, {pais}"
 
         # Exibição dos dados organizados
-        print("\n" + "=" * 40)
+        print("\n" + "=" * 40,"\n")
         print(f"🌍 Clima atual em: {localizacao}")
-        print("=" * 40)
-        print(f"🌤️  Condição: {descricao_clima.capitalize()}")
-        print(f"🌡️  Temperatura: {temperatura}°C")
-        print(f"🔥 Sensação Térmica: {sensacao_termica}°C")
-        print(f"💧 Umidade: {umidade}%")
-        print("=" * 40)
+        time.sleep(1)
+        print("\n","=" * 40)
+        print("\n",f"🌤️  Condição: {descricao_clima.capitalize()}")
+        time.sleep(1)
+        print("\n",f"🌡️  Temperatura: {temperatura}°C")
+        time.sleep(1)
+        print("\n",f"🔥 Sensação Térmica: {sensacao_termica}°C")
+        time.sleep(1)
+        print("\n",f"💧 Umidade: {umidade}%")
+        time.sleep(1)
+        print("=" * 40,"\n")
 
     elif resposta.status_code == 401:
         print("\n❌ Erro 401: Chave de API não autorizada.")
