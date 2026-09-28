@@ -8,4 +8,4 @@ nome = input("\nDigite o seu nome: ")
 
 hora_atual = datetime.now().strftime("%H:%M")
 time.sleep(2)
-print(f"\nOi, {nome}! Agora são exatamente {hora_atuala Seja a-vindo!\n")
+print(f"\nOi, {nome}! Agora são exatamente {hora_atual}. Seja bem-vindo!\n")
